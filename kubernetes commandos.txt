@@ -1,0 +1,7 @@
+docker build -t junior/posts:0.0.1 .
+
+kubectl apply -f posts.yaml //corre el pod
+
+kubectl delete pod <nombre-del-pod>
+
+kubectl get pods // lista los pods corriendo
