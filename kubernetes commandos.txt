@@ -1,7 +1,42 @@
+### Docker Comandos ###
 docker build -t junior/posts:0.0.1 .
+docker run [image id o tag]
+docker run -it [image id o tag] [cmd]
+docker run -p 8000:8080 nombre_del_contenedor 
 
+docker push junior/posts // Envia la imagen a docker hub 
+nota: primero se crea el repositorio en docker hub donde se va subir la imagen
+hacer el build con el tag que da dockerh hub y luego hacer push, facilita las cosas 
+example:  
+- docker build -t juniorotero/junior-posts . // se crea la imagen ya sea por primera vez o cada vez que se actualiza el codigo del proyecto
+- docker push juniorotero/junior-posts // despues de haber creado el repo en docker hub
+- kubectl rollout restart deployment [depl_name] // luego se ejecuta este comando para reiniciar
+y tome la nueva version de la imagen
+
+### Kubernetes Comandos ###
 kubectl apply -f posts.yaml //corre el pod
 
 kubectl delete pod <nombre-del-pod>
 
 kubectl get pods // lista los pods corriendo
+
+kubectl exec -it [pod_name] [cmd]
+
+kubectl logs [pod_name]
+
+kubectl describe pod [pod_name]
+
+
+#Deployments commands
+
+kubectl apply -f [config file name]
+kubectl delete deployment [depl_name]
+
+kubectl get deployments
+
+kubectl describe deployment [depl_name]
+
+kubectl rollout restart deployment [depl_name]
+
+
+
