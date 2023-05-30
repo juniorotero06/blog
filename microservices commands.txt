@@ -39,4 +39,16 @@ kubectl describe deployment [depl_name]
 kubectl rollout restart deployment [depl_name]
 
 
+## Skaffold commands
+
+## Primero se debe intalar chocolay manage package para luego poder instalar skaffold 
+
+skaffold schema list // muestra todas las versiones de skaffold compatibles 
+
+skaffold fix // muestra una recomendacion para el archivo de configuracion con la ultima version
+
+skaffold dev // inicia y corre la configuracion de skaffold
+
+para salirse de skkafold solo es dar ctrl + c
+
 
