@@ -39,9 +39,23 @@ kubectl describe deployment [depl_name]
 kubectl rollout restart deployment [depl_name]
 
 
+## Instalar ingress nginx
+- kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.0/deploy/static/provider/cloud/deploy.yaml
+
+## instalar chocolatey
+
+- Get-ExecutionPolicy
+
+- Set-ExecutionPolicy Bypass -Scope Process
+
+- Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+
 ## Skaffold commands
 
 ## Primero se debe intalar chocolay manage package para luego poder instalar skaffold 
+
+choco install -y skaffold
 
 skaffold schema list // muestra todas las versiones de skaffold compatibles 
 
